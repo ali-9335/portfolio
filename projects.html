@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:#081b29;
+    color: #ededed;
+}
+.head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .2s;
+}
+.navbar a{
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 450;
+    margin-left: 25px;
+}
+.navbar a:hover{
+    color: #00abf0;
+}
+.navbar a.active{
+    color: #00abf0;
+}
+
+
+
+
+.container {
+    margin-top: -40px;
+  padding: 50px 0px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.parent {
+  height: 400px;
+  width: 300px;
+  padding: 20px;
+  perspective: 1000px;
+}
+.card {
+  padding-top: 100px;
+  transform-style: preserve-3d;
+  background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center center;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+}
+.card:hover {
+  background-position: 80% 20%;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+}
+.content-box {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.811);
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+  transition: all 0.5s ease-in-out;
+  padding: 50px 25px 25px 25px;
+  transform-style: preserve-3d;
+}
+.content-box .card-title {
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+}
+.content-box .card-title:hover {
+  transform: translate3d(0px, 0px, 50px);
+}
+.content-box .card-content {
+  padding-top: 15px;
+  font-size: 12px;
+  color: #b9b9b9;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+}
+.content-box .card-content:hover {
+  transform: translate3d(0px, 0px, 50px);
+}
+.content-box .see-more {
+  display: block;
+  font-weight: 900;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #08f;
+  padding-top: 15px;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+}
+.content-box .see-more:hover {
+  transform: translate3d(0px, 0px, 50px);
+}
+.date-box {
+  position: absolute;
+  top: 75px;
+  left: 25px;
+  height: 60px;
+  width: 60px;
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: #06f 0px 20px 60px 0px, #00c8ff 0px 18px 36px -18px;
+  transform: translate3d(0px, 0px, 50px);
+}
+.date-box span {
+  display: block;
+  text-align: center;
+}
+.date-box .month {
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+.date-box .date {
+  font-size: 20px;
+  font-weight: 900;
+  color: #08f;
+}
+.card2 {
+  filter: hue-rotate(150deg);
+}
+.card3 {
+  filter: hue-rotate(300deg);
+}
+.card4 {
+  filter: hue-rotate(90deg);
+}
+.heading-project{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 300%;
+    padding-top: 100px;
+
+
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+     <!--Project section-->
+     <header class="head">
+        <a href="#" class="logo">Ali</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="about.html">About me</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+
+     <h1 class="heading-project" >Projects</h1>
+
+
+     <div class="container">
+        
+        <div class="parent">
+            <div class="card">
+                <div class="content-box">
+                    <h1 class="card-title">Snake Game</h1>
+                    <p class="card-content">
+                      Dive into nostalgia with our Snake Game project, a modern twist on the classic arcade favorite. Experience the thrill of guiding the snake to devour food and grow longer while avoiding collisions with itself and the walls. 
+                    </p>
+                    <span class="see-more"><a href="./game/index.html"target="_blank">OPEN</a></span>
+                </div>
+                <div class="date-box">
+                    <span class="month">Jan</span>
+                    <span class="date">23</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="parent card2">
+            <div class="card ">
+                <div class="content-box">
+                    <h1 class="card-title">Todo-List</h1>
+                    <p class="card-content">
+                      Boost your productivity and stay organized with our Todo List Manager. Whether you're tackling daily tasks or setting reminders, our intuitive app makes it effortless to create, prioritize, and manage your to-do lists. 
+                      
+                    </p>
+                    <span class="see-more"><a href="./todolist/todo.html"target="_blank">OPEN</a></span>
+                </div>
+                <div class="date-box">
+                    <span class="month">Feb</span>
+                    <span class="date">28</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="parent card3">
+            <div class="card">
+                <div class="content-box">
+                    <h1 class="card-title">Weather</h1>
+                    <p class="card-content">
+                      Stay ahead of the elements with our Weather Forecast Application. Seamlessly integrated with reliable weather APIs, our app delivers up-to-date forecasts for any location worldwide. 
+                    </p>
+                    <span class="see-more"><a href="./weather/index.html"target="_blank">OPEN</a></span>
+                </div>
+                <div class="date-box">
+                    <span class="month">Jan</span>
+                    <span class="date">12</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="parent card4">
+            <div class="card">
+                <div class="content-box">
+                    <h1 class="card-title">Solar</h1>
+                    <p class="card-content">
+                      Harness the power of the sun with our Solar Energy Monitoring System. Designed for homeowners and businesses alike, our platform provides real-time insights into solar energy production, consumption, and savings. 
+                    </p>
+                    <span class="see-more"><a href="./swamy/index.html" target="_blank">OPEN</a></span>
+                </div>
+                <div class="date-box">
+                    <span class="month">April</span>
+                    <span class="date">5</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

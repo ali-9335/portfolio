@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:#081b29;
+    color: #ededed;
+}
+.head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .2s;
+}
+.navbar a{
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 450;
+    margin-left: 25px;
+}
+.navbar a:hover{
+    color: #00abf0;
+}
+.navbar a.active{
+    color: #00abf0;
+}
+.home{
+    background: url('home.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.home-content{
+    max-width: 600px;
+}
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color:#00abf0 ;
+}
+.home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content .btn-box a{
+    position: relative;
+    width:345px;
+    height: 50px;
+}
+.home-content .btn-box ::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .9s;
+    z-index: 2;
+}
+.temp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.temp div{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    background-color: #5786a7;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+.temp div:hover{
+    background: linear-gradient( #5786a7,#081b29);
+    transform: scale(1.1);
+
+}
+.btn-box{
+    margin: 25px 0 0 4px;
+}
+.btn-box a{
+    font-size: 25px;
+    text-decoration: none;
+    background-color: #00abf0;
+    padding: 5px;
+    border: 2px solid #00abf0;
+    color: white;
+    border-radius: 4px;
+}
+.btn-box a:hover{
+    background-color: #00abf0;
+    color: #081b29;
+}
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #00abf0;
+}
+.home-sci{
+position: absolute;
+bottom: 50px;
+width: 170px;
+display: flex;
+justify-content: space-between;
+}
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.2s;
+    z-index: 2;
+}
+.home-sci a{
+position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    color: #00abf0;
+    z-index: 1;
+    overflow: hidden;
+
+}
+.home-sci a::before{
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: #00abf0;
+z-index: -1;
+transition: 0.5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+
+}
+.home-sci a:hover{
+    color: #081b29;
+
+}
+.home-imghov{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 700px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+.home-imghov:hover{
+    background-color: #081b29;
+    opacity: .8;
+}
+.home-imghov::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.2s;
+    z-index: 2;
+}
+
+@keyframes showRight {
+    100%{
+        width: 0%;
+    }
+}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+    
+    <header class="head">
+        <a href="#" class="logo">Ali</a>
+        <nav class="navbar">
+            <a href="index.html"class="active">Home</a>
+            <a href="projects.html" >Projects</a>
+            <a href="about.html">About me</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, I'm Ali Shaad</h1>
+            <h3><span id="element"></span></h3>
+            <p>Welcome to my portfolio! As a software engineer, I'm passionate about leveraging cutting-edge technologies to build innovative solutions that solve real-world problems. With a strong foundation in dsa and web development, I thrive in dynamic environments where challenges drive creativity.</p>
+            <div class="btn-box">
+                <!--<a href="">Hire Me</a>
+                <a href="">Let's Talk</a>-->
+               
+            </div>
+            <div class="home-sci">
+                <a href="https://www.facebook.com/ali.shad.71619/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/ali_x_shad/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/ali-shaad-727b9224b/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+        </div>
+        <span class="home-imghov" ></span>
+    </section>
+    <div id="project-sec"></div>
+    <br>
+    
+
+
+   
+    <!--ABout me-->
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+
+        var typed = new Typed('#element', {
+          strings: ['Frontend Development', 'Backend Development','Problem Solvings'],
+          typeSpeed: 30,
+          loop:true,
+        });
+      </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background:#081b29;
+    color: #ededed;
+}
+.head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .2s;
+}
+.navbar a{
+    font-size: 18px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 450;
+    margin-left: 25px;
+}
+.navbar a:hover{
+    color: #00abf0;
+}
+.navbar a.active{
+    color: #00abf0;
+}
+
+    </style>
+</head>
+<body>
+    <header class="head">
+        <a href="#" class="logo">Ali</a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="projects.html" >Projects</a>
+            <a href="about.html"class="active">About me</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="text-white-600 body-font ">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h2 class="text-xl text-indigo-500 tracking-widest font-medium title-font mb-1">Ali Shaad</h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white-900">Software Engineer</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Hello there! I'm Ali Shaad, a passionate software developer with expertise in frontend and backend development, as well as data structures and algorithms (DSA). I thrive on solving complex problems and crafting elegant solutions that push the boundaries of technology.</p>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-white-900 font-medium title-font mb-2">Frontend Development:</h2>
+              <p class="leading-relaxed text-base mb-4">With a keen eye for design and a love for creating intuitive user experiences, I specialize in frontend development. From crafting responsive layouts to implementing interactive features, I leverage the latest web technologies such as HTML5, CSS3, and JavaScript frameworks like React and Vue.js to bring ideas to life.</p>
+           
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-white-900 font-medium title-font mb-2">Backend Development:</h2>
+              <p class="leading-relaxed text-base mb-4">I'm equally proficient in backend development, where I architect robust and scalable systems to power web applications. Leveraging languages like Python, Node.js, and Java, along with frameworks like Express and Spring Boot, I design efficient APIs, manage databases, and ensure the seamless functioning of web applications.</p>
+             
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-white-900 font-medium title-font mb-2">Data Structures and Algorithms:</h2>
+              <p class="leading-relaxed text-base mb-4">As a problem solver at heart, I enjoy tackling algorithmic challenges and optimizing code for performance and efficiency. My strong foundation in data structures and algorithms allows me to analyze problems, devise optimal solutions, and implement them effectively, whether it's optimizing algorithms for speed or designing data structures for scalability.</p>
+             
+            </div>
+            <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+              <h2 class="text-lg sm:text-xl text-white-900 font-medium title-font mb-2">What Drives Me:</h2>
+              <p class="leading-relaxed text-base mb-4">I'm driven by a passion for continuous learning and growth, constantly seeking out new technologies and best practices to stay ahead in the ever-evolving field of software development. I thrive in collaborative environments where I can contribute my expertise, learn from others, and collectively build innovative solutions that make a positive impact.</p>
+             
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+      
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+</body>
+</html>
